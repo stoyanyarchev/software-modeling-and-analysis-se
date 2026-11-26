@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "revenue04",
+  "position": {
+    "x": 20,
+    "y": 460,
+    "z": 4,
+    "width": 610,
+    "height": 310,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayments"
+                    }
+                  },
+                  "Property": "PaymentStatus"
+                }
+              },
+              "queryRef": "FactPayments.PaymentStatus",
+              "nativeQueryRef": "PaymentStatus",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayments"
+                    }
+                  },
+                  "Property": "Payment Attempts"
+                }
+              },
+              "queryRef": "FactPayments.Payment Attempts",
+              "nativeQueryRef": "Payment Attempts"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Payment attempt status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

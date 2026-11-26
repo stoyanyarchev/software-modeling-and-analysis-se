@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "overview05",
+  "position": {
+    "x": 965,
+    "y": 125,
+    "z": 5,
+    "width": 300,
+    "height": 110,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMatches"
+                    }
+                  },
+                  "Property": "Conversation Rate"
+                }
+              },
+              "queryRef": "FactMatches.Conversation Rate",
+              "nativeQueryRef": "Conversation Rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Conversation Rate'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

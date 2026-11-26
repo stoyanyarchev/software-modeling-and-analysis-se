@@ -1,0 +1,29 @@
+// FactMatches
+Total Matches = SUM(FactMatches[MatchCount])
+
+// FactMatches
+Messages Sent = SUM(FactMatches[MessageCount])
+
+// FactMatches
+Conversation Rate = DIVIDE(CALCULATE([Total Matches],FactMatches[HasConversation]=TRUE()),[Total Matches])
+
+// FactMatches
+Average First Reply Minutes = AVERAGE(FactMatches[MinutesToFirstMessage])
+
+// FactPayments
+Net Revenue = SUM(FactPayments[NetRevenue])
+
+// FactPayments
+Payment Attempts = SUM(FactPayments[PaymentCount])
+
+// FactPayments
+Paying Users = CALCULATE(DISTINCTCOUNT(FactPayments[UserKey]),FactPayments[PaymentStatus]="Paid")
+
+// FactSwipes
+Total Swipes = SUM(FactSwipes[SwipeCount])
+
+// FactSwipes
+Positive Swipes = SUM(FactSwipes[PositiveSwipeCount])
+
+// FactSwipes
+Like Rate = DIVIDE([Positive Swipes],[Total Swipes])

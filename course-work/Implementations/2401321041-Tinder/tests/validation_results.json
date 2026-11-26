@@ -1,0 +1,70 @@
+[
+  {
+    "check": "13 OLTP entities",
+    "result": "PASS"
+  },
+  {
+    "check": "73 OLTP attributes",
+    "result": "PASS"
+  },
+  {
+    "check": "Common-interest function matches set intersection",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject self-swipe",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject unknown swipe type",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject non-existent user",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject duplicate directed swipe",
+    "result": "PASS"
+  },
+  {
+    "check": "Protect swipe history",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject match without reciprocal likes",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject nonparticipant message",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject message after unmatch",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject blank message",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject underage account",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject negative payment",
+    "result": "PASS"
+  },
+  {
+    "check": "Reject unmatch without end timestamp",
+    "result": "PASS"
+  },
+  {
+    "check": "Failed and refunded attempts yield zero revenue",
+    "result": "PASS"
+  },
+  {
+    "check": "Repeated ETL preserves payment count and revenue",
+    "result": "PASS"
+  }
+]

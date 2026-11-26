@@ -1,0 +1,4 @@
+﻿PaymentMethodKey,PaymentMethodID,MethodName,Category
+1,1,Bank card,Card
+2,2,Apple Pay,Wallet
+3,3,Google Pay,Wallet

@@ -1,0 +1,1668 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DimCity\",\"DimDate\",\"DimMatchStatus\",\"DimPaymentMethod\",\"DimPlan\",\"DimSwipeType\",\"DimTime\",\"DimUser\",\"FactMatches\",\"FactPayments\",\"FactSwipes\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "ea368c0fd605500aae33c3f7e171e35e",
+        "fromColumn": "DateKey",
+        "fromTable": "FactSwipes",
+        "toColumn": "DateKey",
+        "toTable": "DimDate"
+      },
+      {
+        "name": "2caf106778dd568c88686eec1787d10a",
+        "fromColumn": "DateKey",
+        "fromTable": "FactMatches",
+        "toColumn": "DateKey",
+        "toTable": "DimDate"
+      },
+      {
+        "name": "34bb505ef8215627b0c16ff3ae895fc8",
+        "fromColumn": "DateKey",
+        "fromTable": "FactPayments",
+        "toColumn": "DateKey",
+        "toTable": "DimDate"
+      },
+      {
+        "name": "77937940f8c8525ea075271cd0b7aebc",
+        "fromColumn": "TimeKey",
+        "fromTable": "FactSwipes",
+        "toColumn": "TimeKey",
+        "toTable": "DimTime"
+      },
+      {
+        "name": "c66f5662b855530a839318ab4c904396",
+        "fromColumn": "TimeKey",
+        "fromTable": "FactMatches",
+        "toColumn": "TimeKey",
+        "toTable": "DimTime"
+      },
+      {
+        "name": "6da9c848ca035fc5ae31dba59b8f4466",
+        "fromColumn": "TimeKey",
+        "fromTable": "FactPayments",
+        "toColumn": "TimeKey",
+        "toTable": "DimTime"
+      },
+      {
+        "name": "c2bfa3dcfd065b8cb3833536bf3d68b7",
+        "fromColumn": "UserKey",
+        "fromTable": "FactSwipes",
+        "toColumn": "UserKey",
+        "toTable": "DimUser"
+      },
+      {
+        "name": "dc59a8f46c315a63b72858a98aa293d1",
+        "fromColumn": "UserKey",
+        "fromTable": "FactMatches",
+        "toColumn": "UserKey",
+        "toTable": "DimUser"
+      },
+      {
+        "name": "a703ca7594fa50978abcc5df1433b34b",
+        "fromColumn": "UserKey",
+        "fromTable": "FactPayments",
+        "toColumn": "UserKey",
+        "toTable": "DimUser"
+      },
+      {
+        "name": "d1d016b921075860bfbe0703a2cc7af8",
+        "fromColumn": "CityKey",
+        "fromTable": "FactSwipes",
+        "toColumn": "CityKey",
+        "toTable": "DimCity"
+      },
+      {
+        "name": "3a0a89e132c555cf9970d1c59b2a36c4",
+        "fromColumn": "CityKey",
+        "fromTable": "FactMatches",
+        "toColumn": "CityKey",
+        "toTable": "DimCity"
+      },
+      {
+        "name": "c25cc93fe7f8568db44eb8234796cdc0",
+        "fromColumn": "CityKey",
+        "fromTable": "FactPayments",
+        "toColumn": "CityKey",
+        "toTable": "DimCity"
+      },
+      {
+        "name": "752ba20469e05f80bdd78b6ab80cbefe",
+        "fromColumn": "SwipeTypeKey",
+        "fromTable": "FactSwipes",
+        "toColumn": "SwipeTypeKey",
+        "toTable": "DimSwipeType"
+      },
+      {
+        "name": "4a6f23183e195136a9366f98afa88402",
+        "fromColumn": "PlanKey",
+        "fromTable": "FactPayments",
+        "toColumn": "PlanKey",
+        "toTable": "DimPlan"
+      },
+      {
+        "name": "b151f74b13e1581f8c061b88d3a07ed1",
+        "fromColumn": "PaymentMethodKey",
+        "fromTable": "FactPayments",
+        "toColumn": "PaymentMethodKey",
+        "toTable": "DimPaymentMethod"
+      },
+      {
+        "name": "29609f912a6155339d99523960eb6f4a",
+        "fromColumn": "MatchStatusKey",
+        "fromTable": "FactMatches",
+        "toColumn": "MatchStatusKey",
+        "toTable": "DimMatchStatus"
+      },
+      {
+        "name": "279b2a31-a85f-4979-b22b-852e2ec5164f",
+        "fromColumn": "BirthDate",
+        "fromTable": "DimUser",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_ac17b461-8e93-465c-bd81-944507655067"
+      },
+      {
+        "name": "b69706cc-f923-4fe3-8ffb-dcfd182d4d60",
+        "fromColumn": "RegisteredAt",
+        "fromTable": "DimUser",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_c1b8cfab-870e-419e-ab08-f08c6b605669"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DimCity",
+        "columns": [
+          {
+            "name": "CityKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "63dbb708-c9a1-43ab-b851-cb43b2663782",
+            "sourceColumn": "CityKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CityID",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "169e4e47-0a6a-4e96-bc65-bdd8a85e5965",
+            "sourceColumn": "CityID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CityName",
+            "dataType": "string",
+            "lineageTag": "ecd7e979-c66e-4ba3-88a3-64b511e23b87",
+            "sourceColumn": "CityName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "lineageTag": "4e9b2866-9556-4168-92fe-4e12b36f465f",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c3e4aa8d-a3f5-43a6-9281-e0e7314aa6a5",
+        "partitions": [
+          {
+            "name": "DimCity",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimCity\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "854a9971-5f96-4a2b-9a46-c67b0c4dac77",
+            "sourceColumn": "DateKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FullDate",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "isKey": true,
+            "lineageTag": "7a7c5177-550f-427d-b21b-8922f2f6fc5b",
+            "sourceColumn": "FullDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "lineageTag": "d6c444e2-bf19-4028-9080-26a8e0e83962",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthNumber",
+            "dataType": "int64",
+            "lineageTag": "cc68f46e-f876-4dcc-b7fb-906f77557662",
+            "sourceColumn": "MonthNumber",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "YearMonth",
+            "dataType": "string",
+            "lineageTag": "77029b60-59be-4f3d-8811-b972e9b9ee0c",
+            "sourceColumn": "YearMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayOfWeek",
+            "dataType": "int64",
+            "lineageTag": "a535a002-3df3-4569-b385-169a976769d2",
+            "sourceColumn": "DayOfWeek",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayName",
+            "dataType": "string",
+            "lineageTag": "1310e319-6d19-40d3-9099-529cde0061a4",
+            "sortByColumn": "DayOfWeek",
+            "sourceColumn": "DayName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IsWeekend",
+            "dataType": "boolean",
+            "lineageTag": "373f0b3e-b8ad-445f-8a7f-b98fbe0a0723",
+            "sourceColumn": "IsWeekend",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "ec4a2c2b-c258-4be1-9944-f209123bc32d",
+        "partitions": [
+          {
+            "name": "DimDate",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimDate\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimMatchStatus",
+        "columns": [
+          {
+            "name": "MatchStatusKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "f7030ad7-a685-4987-8d92-d0164d60d432",
+            "sourceColumn": "MatchStatusKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "StatusName",
+            "dataType": "string",
+            "lineageTag": "582b8aee-f11f-4ba3-983f-971568d6cdcd",
+            "sourceColumn": "StatusName",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5fada81f-404b-4e0d-9b9b-e969aac87248",
+        "partitions": [
+          {
+            "name": "DimMatchStatus",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimMatchStatus\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimPaymentMethod",
+        "columns": [
+          {
+            "name": "PaymentMethodKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "7aa3d4e6-bd35-43fd-bec1-3ad3873d613f",
+            "sourceColumn": "PaymentMethodKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PaymentMethodID",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "25d4084c-a7ca-4eb1-a2d8-1246c5e4ebd1",
+            "sourceColumn": "PaymentMethodID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MethodName",
+            "dataType": "string",
+            "lineageTag": "7edea4c4-e557-4f98-ab83-5758dd343193",
+            "sourceColumn": "MethodName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "lineageTag": "b31be010-dc16-45ac-8b8a-c3e64f085748",
+            "sourceColumn": "Category",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3a50e43c-734a-4516-8bcc-70d9b90b6667",
+        "partitions": [
+          {
+            "name": "DimPaymentMethod",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimPaymentMethod\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimPlan",
+        "columns": [
+          {
+            "name": "PlanKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "0a2cbbae-9b6a-47c6-b654-421e827eb5ca",
+            "sourceColumn": "PlanKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PlanID",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "5868e29e-f4ee-4365-9737-5f2a4a87d749",
+            "sourceColumn": "PlanID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PlanName",
+            "dataType": "string",
+            "lineageTag": "d21db89e-7bef-4067-ad8d-e191e9d9514b",
+            "sourceColumn": "PlanName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthlyPrice",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "616ca615-93dd-46ee-b868-05ca3eb35196",
+            "sourceColumn": "MonthlyPrice",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Currency",
+            "dataType": "string",
+            "lineageTag": "732423b8-d6b3-4491-8623-b202c9612566",
+            "sourceColumn": "Currency",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "661757b3-ff7a-42df-b40e-92cf4f9f5587",
+        "partitions": [
+          {
+            "name": "DimPlan",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimPlan\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimSwipeType",
+        "columns": [
+          {
+            "name": "SwipeTypeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "f76252f7-032b-4660-80dd-f023cd228b68",
+            "sourceColumn": "SwipeTypeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SwipeType",
+            "dataType": "string",
+            "lineageTag": "e533bd59-a94c-4ef6-bcb5-c2a75e50240e",
+            "sourceColumn": "SwipeType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "IsPositive",
+            "dataType": "boolean",
+            "lineageTag": "7a73c6a6-8dd7-4eca-b630-c5b5bb022f3a",
+            "sourceColumn": "IsPositive",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "196d4fe0-3ff5-477b-8c34-b7aa6668483d",
+        "partitions": [
+          {
+            "name": "DimSwipeType",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimSwipeType\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimTime",
+        "columns": [
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "5dd2069a-30cc-4c04-86c2-ec30155b1284",
+            "sourceColumn": "TimeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HourLabel",
+            "dataType": "string",
+            "lineageTag": "a462b786-cf56-4ff0-8a82-41280f7ff46c",
+            "sourceColumn": "HourLabel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PartOfDay",
+            "dataType": "string",
+            "lineageTag": "62ba69d6-0f6d-4c9c-9868-cf6fb99f7419",
+            "sourceColumn": "PartOfDay",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "95518477-31e7-45e3-be8c-1c4439167fad",
+        "partitions": [
+          {
+            "name": "DimTime",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimTime\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimUser",
+        "columns": [
+          {
+            "name": "UserKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "8918c2d6-01d6-475c-ad2c-20e4e2b08a97",
+            "sourceColumn": "UserKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UserID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "ed99d5a1-f831-4b0a-b073-dc49b4adc800",
+            "sourceColumn": "UserID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "DisplayName",
+            "dataType": "string",
+            "lineageTag": "aa261ac0-5db4-466c-b649-123ac7c87fa3",
+            "sourceColumn": "DisplayName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "lineageTag": "8fa6d9e6-f523-4d32-a6e7-896ea80d81ae",
+            "sourceColumn": "Gender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BirthDate",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "fb616a8b-6823-40e9-ad09-5174c4dcf6cb",
+            "sourceColumn": "BirthDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_ac17b461-8e93-465c-bd81-944507655067"
+                },
+                "isDefault": true,
+                "relationship": "279b2a31-a85f-4979-b22b-852e2ec5164f"
+              }
+            ]
+          },
+          {
+            "name": "RegisteredAt",
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd HH:mm:ss",
+            "lineageTag": "eb258bb9-5cdc-4222-ad43-7422f8e6d34b",
+            "sourceColumn": "RegisteredAt",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_c1b8cfab-870e-419e-ab08-f08c6b605669"
+                },
+                "isDefault": true,
+                "relationship": "b69706cc-f923-4fe3-8ffb-dcfd182d4d60"
+              }
+            ]
+          },
+          {
+            "name": "IsVerified",
+            "dataType": "boolean",
+            "lineageTag": "b0004fd9-367c-40a2-b631-7e543c2855b7",
+            "sourceColumn": "IsVerified",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9276c8b1-f5d7-4959-b87f-b5f3b3839958",
+        "partitions": [
+          {
+            "name": "DimUser",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"DimUser\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactMatches",
+        "columns": [
+          {
+            "name": "MatchKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "cfa1958a-e577-4fd8-ad47-f824e3a88659",
+            "sourceColumn": "MatchKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "078438c1-513e-4f06-9bf3-efb8e1e14159",
+            "sourceColumn": "DateKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "d6be0654-ddb4-4b74-b3ab-46eb1c6199c1",
+            "sourceColumn": "TimeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UserKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "67a396d3-9bcc-4a49-9f0f-2c8c6ed30826",
+            "sourceColumn": "UserKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OtherUserID",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "84179620-23dc-428d-a568-1c51d419c51f",
+            "sourceColumn": "OtherUserID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CityKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "863f5327-2a0b-4699-9dfe-56292dcffb2c",
+            "sourceColumn": "CityKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MatchStatusKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "798a2651-b36b-416c-ac9d-16bc67998eb5",
+            "sourceColumn": "MatchStatusKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MatchCount",
+            "dataType": "int64",
+            "lineageTag": "97e533cd-3438-428a-95b1-8a757636aaa2",
+            "sourceColumn": "MatchCount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MessageCount",
+            "dataType": "int64",
+            "lineageTag": "2068396c-b1ed-4dd4-a812-260696f2acd3",
+            "sourceColumn": "MessageCount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HasConversation",
+            "dataType": "boolean",
+            "lineageTag": "6d52d3eb-8d40-459c-a58d-71e991b55eef",
+            "sourceColumn": "HasConversation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MinutesToFirstMessage",
+            "dataType": "int64",
+            "lineageTag": "79c51b34-f696-4c22-9650-e0b65d847f94",
+            "sourceColumn": "MinutesToFirstMessage",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3f1fa40d-b1bf-49a1-81c2-fa3b4f5b5f16",
+        "measures": [
+          {
+            "name": "Total Matches",
+            "expression": "SUM(FactMatches[MatchCount])",
+            "formatString": "#,0",
+            "lineageTag": "6f10cdf7-099a-4444-b2ea-71ecd46b5300"
+          },
+          {
+            "name": "Messages Sent",
+            "expression": "SUM(FactMatches[MessageCount])",
+            "formatString": "#,0",
+            "lineageTag": "99e0ebde-ba4b-426c-9813-618e208c90fe"
+          },
+          {
+            "name": "Conversation Rate",
+            "expression": "DIVIDE(CALCULATE([Total Matches],FactMatches[HasConversation]=TRUE()),[Total Matches])",
+            "formatString": "0.0%",
+            "lineageTag": "b67835c8-23eb-4004-8680-f7629240ba7a"
+          },
+          {
+            "name": "Average First Reply Minutes",
+            "expression": "AVERAGE(FactMatches[MinutesToFirstMessage])",
+            "formatString": "0.0",
+            "lineageTag": "f6049fba-d4b2-4cf0-960d-372505818acc"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactMatches",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"FactMatches\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactPayments",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PaymentKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "4f694980-6b95-4517-82c9-7627da9d77b3",
+            "sourceColumn": "PaymentKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "18e38b0f-9c89-4d1d-9a1d-c3127b3e8c67",
+            "sourceColumn": "DateKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "33364b19-b6de-43f5-b863-1f3fc7b77508",
+            "sourceColumn": "TimeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UserKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "16535d98-f48b-430f-93b5-05fc69643cda",
+            "sourceColumn": "UserKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CityKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "c82e497e-ca3d-4569-b709-1ba22d5310ef",
+            "sourceColumn": "CityKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PlanKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "85220f4b-4160-49ab-a04e-e560fd93ebb1",
+            "sourceColumn": "PlanKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PaymentMethodKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "014e3086-d74f-4eac-8e8e-9ed063e3cf1e",
+            "sourceColumn": "PaymentMethodKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PaymentStatus",
+            "dataType": "string",
+            "lineageTag": "99c08603-ec78-4b0b-b524-e62b56bcdc54",
+            "sourceColumn": "PaymentStatus",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6d6084ed-4556-4bf3-bc90-a5440ead9df5",
+            "sourceColumn": "Amount",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NetRevenue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0e644736-7109-4af5-aca6-ca9841114646",
+            "sourceColumn": "NetRevenue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PaymentCount",
+            "dataType": "int64",
+            "lineageTag": "52454a1d-3bcf-40ad-a8bd-d7f0bc8efa32",
+            "sourceColumn": "PaymentCount",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8294e593-4ef5-4cf1-8b10-945ad14a781b",
+        "measures": [
+          {
+            "name": "Net Revenue",
+            "expression": "SUM(FactPayments[NetRevenue])",
+            "formatString": "€ #,0.00",
+            "lineageTag": "03ef5cd5-71f7-43cb-8df5-d964df10b4b1"
+          },
+          {
+            "name": "Payment Attempts",
+            "expression": "SUM(FactPayments[PaymentCount])",
+            "formatString": "#,0",
+            "lineageTag": "9417ddd1-c35a-45cb-8961-3d1900abef03"
+          },
+          {
+            "name": "Paying Users",
+            "expression": "CALCULATE(DISTINCTCOUNT(FactPayments[UserKey]),FactPayments[PaymentStatus]=\"Paid\")",
+            "formatString": "#,0",
+            "lineageTag": "58874004-f8f5-4d76-af40-bf3730fc313a"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactPayments",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"FactPayments\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactSwipes",
+        "columns": [
+          {
+            "name": "SwipeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "a5141a25-a498-49d7-9f01-f77cdcd93e33",
+            "sourceColumn": "SwipeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "e4e4290c-f3d5-4f03-8871-3720831fc73c",
+            "sourceColumn": "DateKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "356974ee-2782-43c0-a9b8-cec685d35a35",
+            "sourceColumn": "TimeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UserKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "d34cf236-b051-4a8b-b67d-95b0cd35806b",
+            "sourceColumn": "UserKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TargetUserID",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "5b7b8cd5-99a0-4e11-8041-7775958ce1f2",
+            "sourceColumn": "TargetUserID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CityKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "1cdf2f37-960e-4596-9cd5-eb665df24c86",
+            "sourceColumn": "CityKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SwipeTypeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "88fa6f6a-a4d4-4837-a3fb-45be327bde6e",
+            "sourceColumn": "SwipeTypeKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SwipeCount",
+            "dataType": "int64",
+            "lineageTag": "938e9fef-f57b-4ee8-9922-4f8ce94473ee",
+            "sourceColumn": "SwipeCount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PositiveSwipeCount",
+            "dataType": "int64",
+            "lineageTag": "0d90cf2f-d8da-49f7-907e-4ba5733e8097",
+            "sourceColumn": "PositiveSwipeCount",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5fcf7b46-51ea-4616-8944-48968c3d816e",
+        "measures": [
+          {
+            "name": "Total Swipes",
+            "expression": "SUM(FactSwipes[SwipeCount])",
+            "formatString": "#,0",
+            "lineageTag": "19e9718f-e75a-4aab-bbf5-cc808f1092de"
+          },
+          {
+            "name": "Positive Swipes",
+            "expression": "SUM(FactSwipes[PositiveSwipeCount])",
+            "formatString": "#,0",
+            "lineageTag": "676170f8-79c4-463a-b5c7-e37d38f178f8"
+          },
+          {
+            "name": "Like Rate",
+            "expression": "DIVIDE([Positive Swipes],[Total Swipes])",
+            "formatString": "0.0%",
+            "lineageTag": "e8d6fe53-a6c9-4577-ae52-a61b7fa71f92"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactSwipes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"(localdb)\\MSSQLLocalDB\", \"TinderDW_2401321041\"),",
+                "    Data = Source{[Schema=\"dbo\",Item=\"FactSwipes\"]}[Data]",
+                "in",
+                "    Data"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_3f89ad66-e07b-48c4-845a-b787ed4f6f37",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "21487626-6643-49d2-b324-c7f3fcfa8a9f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "947a42eb-69bc-4b54-9dbf-62dc7542add3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "c2b2742d-076b-4d41-a7d2-b1fa5892433d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "f180e08b-838a-4461-9701-3dd513534b62",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "6a4245a2-2442-4414-8c12-fdd02a60cd2b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "5c2cf55a-5365-45a0-8bc7-6c21607861db",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "38a274ac-e824-4d73-b1b1-d56788012422",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "b79b7945-3b05-43e4-b082-dfc125259cfd",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "e9df23a7-d5f1-47bc-a01d-c0eec43b1228",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "d1d015e9-6c9b-44c8-83c7-559e26897071",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2b977e3b-07bd-4eb6-bca4-f4a93935d3e6",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "454d9012-ee9d-4a2a-8dcd-5042b79354a7"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "483f68c4-3698-420a-96e2-3446fc545566",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_3f89ad66-e07b-48c4-845a-b787ed4f6f37",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_ac17b461-8e93-465c-bd81-944507655067",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "a3956a95-78f8-4e25-8220-becc7af3dfdc",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d00801e0-6a5e-4186-9ffe-15f4236a97d8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "b9584846-db5b-4953-a70f-cc1b4d3260c0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "6193ad50-471c-4649-999a-ffb0eb3f24c4",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "de4228fc-3c41-4eb3-8e84-b2f4f4b88de6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "789222ea-7a9e-4c4d-95b5-22a37f4d98c6",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2e832813-f834-43ae-afc7-696b5647a018",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "2cf5ce15-c950-440a-900c-0e3630a8c73f",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "3b64d927-01d9-458f-92fb-08a58952749a",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "3b499ff6-f722-4033-8d5f-fee67ab1a227",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "268fbc3b-bdd6-4c0c-8705-289c9e62aee0",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "2259165f-0a14-44ef-83ab-636147098fae"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "73e8672b-f12d-484e-b7b5-d48d5c7abcdd",
+        "partitions": [
+          {
+            "name": "LocalDateTable_ac17b461-8e93-465c-bd81-944507655067",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('DimUser'[BirthDate])), 1, 1), Date(Year(MAX('DimUser'[BirthDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_c1b8cfab-870e-419e-ab08-f08c6b605669",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "087accf6-b2bc-4783-a7e9-2929b615f090",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "acbd989a-84eb-40fe-89bc-13f0890d02e6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3f6696a2-1283-441c-8e9f-166abe0d6327",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "72a919d3-0dfe-4d59-89ab-8320f1ae7f20",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d170e780-9c7b-4d64-be77-62cec9d2cceb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "2b2720ce-d503-4e5f-8c36-0fd7a739034f",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0a43f72e-9283-4d12-84a6-923878674c10",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "b1f71a0c-6ddc-4f64-a37f-8788f7505297",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "ff12cfe7-36cb-4374-bb6d-0e4ff14d6f67",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "566532f0-7bf5-42d9-a26d-a5c9d5fc6207",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "9ce1c4a3-4bee-4880-8833-a3eb46c55a93",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "730beba3-e523-4f7b-80b5-4c1d110ddf03"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "1b2675d8-4d2b-4510-beaf-cf1c950b4198",
+        "partitions": [
+          {
+            "name": "LocalDateTable_c1b8cfab-870e-419e-ab08-f08c6b605669",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('DimUser'[RegisteredAt])), 1, 1), Date(Year(MAX('DimUser'[RegisteredAt])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

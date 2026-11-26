@@ -1,0 +1,11 @@
+{
+  "files": 33,
+  "errors": [],
+  "unavailable_schemas": [
+    {
+      "file": "powerbi\\Tinder.Report\\definition\\report.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.4.0/schema.json",
+      "reason": "Microsoft schema endpoint returns 404; verified by opening and saving in Power BI Desktop."
+    }
+  ]
+}

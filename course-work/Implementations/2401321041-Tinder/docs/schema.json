@@ -1,0 +1,2040 @@
+{
+  "oltp": {
+    "Cities": [
+      {
+        "TableName": "Cities",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Cities",
+        "ColumnName": "CityName",
+        "TypeName": "nvarchar",
+        "MaxLength": 160,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(80)",
+        "FK": false
+      },
+      {
+        "TableName": "Cities",
+        "ColumnName": "Country",
+        "TypeName": "nvarchar",
+        "MaxLength": 160,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(80)",
+        "FK": false
+      },
+      {
+        "TableName": "Cities",
+        "ColumnName": "TimeZone",
+        "TypeName": "nvarchar",
+        "MaxLength": 120,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(60)",
+        "FK": false
+      }
+    ],
+    "Interests": [
+      {
+        "TableName": "Interests",
+        "ColumnName": "InterestID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Interests",
+        "ColumnName": "InterestName",
+        "TypeName": "nvarchar",
+        "MaxLength": 120,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(60)",
+        "FK": false
+      },
+      {
+        "TableName": "Interests",
+        "ColumnName": "Category",
+        "TypeName": "nvarchar",
+        "MaxLength": 80,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(40)",
+        "FK": false
+      }
+    ],
+    "Matches": [
+      {
+        "TableName": "Matches",
+        "ColumnName": "MatchID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "UserLowID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "UserHighID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "MatchedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "Status",
+        "TypeName": "nvarchar",
+        "MaxLength": 24,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(12)",
+        "FK": false
+      },
+      {
+        "TableName": "Matches",
+        "ColumnName": "EndedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      }
+    ],
+    "MatchStatusLog": [
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "LogID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "MatchID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "OldStatus",
+        "TypeName": "nvarchar",
+        "MaxLength": 24,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "nvarchar(12)",
+        "FK": false
+      },
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "NewStatus",
+        "TypeName": "nvarchar",
+        "MaxLength": 24,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(12)",
+        "FK": false
+      },
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "ChangedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "MatchStatusLog",
+        "ColumnName": "ChangedBy",
+        "TypeName": "sysname",
+        "MaxLength": 256,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "sysname",
+        "FK": false
+      }
+    ],
+    "Messages": [
+      {
+        "TableName": "Messages",
+        "ColumnName": "MessageID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Messages",
+        "ColumnName": "MatchID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Messages",
+        "ColumnName": "SenderUserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Messages",
+        "ColumnName": "Body",
+        "TypeName": "nvarchar",
+        "MaxLength": 2000,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(1000)",
+        "FK": false
+      },
+      {
+        "TableName": "Messages",
+        "ColumnName": "SentAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Messages",
+        "ColumnName": "ReadAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      }
+    ],
+    "PaymentMethods": [
+      {
+        "TableName": "PaymentMethods",
+        "ColumnName": "PaymentMethodID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "PaymentMethods",
+        "ColumnName": "MethodName",
+        "TypeName": "nvarchar",
+        "MaxLength": 80,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(40)",
+        "FK": false
+      },
+      {
+        "TableName": "PaymentMethods",
+        "ColumnName": "Category",
+        "TypeName": "nvarchar",
+        "MaxLength": 40,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(20)",
+        "FK": false
+      }
+    ],
+    "Payments": [
+      {
+        "TableName": "Payments",
+        "ColumnName": "PaymentID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "SubscriptionID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "PaymentMethodID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "Amount",
+        "TypeName": "decimal",
+        "MaxLength": 5,
+        "Precision": 9,
+        "Scale": 2,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "decimal(9,2)",
+        "FK": false
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "Currency",
+        "TypeName": "char",
+        "MaxLength": 3,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "char(3)",
+        "FK": false
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "PaidAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "Status",
+        "TypeName": "nvarchar",
+        "MaxLength": 20,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(10)",
+        "FK": false
+      },
+      {
+        "TableName": "Payments",
+        "ColumnName": "ExternalRef",
+        "TypeName": "nvarchar",
+        "MaxLength": 160,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(80)",
+        "FK": false
+      }
+    ],
+    "Photos": [
+      {
+        "TableName": "Photos",
+        "ColumnName": "PhotoID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Photos",
+        "ColumnName": "UserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Photos",
+        "ColumnName": "PhotoURL",
+        "TypeName": "nvarchar",
+        "MaxLength": 600,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(300)",
+        "FK": false
+      },
+      {
+        "TableName": "Photos",
+        "ColumnName": "DisplayOrder",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": false
+      },
+      {
+        "TableName": "Photos",
+        "ColumnName": "UploadedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      }
+    ],
+    "Plans": [
+      {
+        "TableName": "Plans",
+        "ColumnName": "PlanID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Plans",
+        "ColumnName": "PlanName",
+        "TypeName": "nvarchar",
+        "MaxLength": 80,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(40)",
+        "FK": false
+      },
+      {
+        "TableName": "Plans",
+        "ColumnName": "MonthlyPrice",
+        "TypeName": "decimal",
+        "MaxLength": 5,
+        "Precision": 9,
+        "Scale": 2,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "decimal(9,2)",
+        "FK": false
+      },
+      {
+        "TableName": "Plans",
+        "ColumnName": "Currency",
+        "TypeName": "char",
+        "MaxLength": 3,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "char(3)",
+        "FK": false
+      },
+      {
+        "TableName": "Plans",
+        "ColumnName": "Description",
+        "TypeName": "nvarchar",
+        "MaxLength": 400,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(200)",
+        "FK": false
+      }
+    ],
+    "Subscriptions": [
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "SubscriptionID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "UserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "PlanID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "StartsAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "EndsAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Subscriptions",
+        "ColumnName": "AutoRenew",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      }
+    ],
+    "Swipes": [
+      {
+        "TableName": "Swipes",
+        "ColumnName": "SwipeID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Swipes",
+        "ColumnName": "ActorUserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Swipes",
+        "ColumnName": "TargetUserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Swipes",
+        "ColumnName": "SwipeType",
+        "TypeName": "nvarchar",
+        "MaxLength": 20,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(10)",
+        "FK": false
+      },
+      {
+        "TableName": "Swipes",
+        "ColumnName": "SwipedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Swipes",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      }
+    ],
+    "UserInterests": [
+      {
+        "TableName": "UserInterests",
+        "ColumnName": "UserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "UserInterests",
+        "ColumnName": "InterestID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "UserInterests",
+        "ColumnName": "AddedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      }
+    ],
+    "Users": [
+      {
+        "TableName": "Users",
+        "ColumnName": "UserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "DisplayName",
+        "TypeName": "nvarchar",
+        "MaxLength": 120,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(60)",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "Email",
+        "TypeName": "nvarchar",
+        "MaxLength": 300,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(150)",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "BirthDate",
+        "TypeName": "date",
+        "MaxLength": 3,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "date",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "Gender",
+        "TypeName": "nvarchar",
+        "MaxLength": 40,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(20)",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "Bio",
+        "TypeName": "nvarchar",
+        "MaxLength": 1000,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "nvarchar(500)",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "RegisteredAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "IsActive",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      },
+      {
+        "TableName": "Users",
+        "ColumnName": "IsVerified",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      }
+    ]
+  },
+  "warehouse": {
+    "DimCity": [
+      {
+        "TableName": "DimCity",
+        "ColumnName": "CityKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimCity",
+        "ColumnName": "CityID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimCity",
+        "ColumnName": "CityName",
+        "TypeName": "nvarchar",
+        "MaxLength": 160,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(80)",
+        "FK": false
+      },
+      {
+        "TableName": "DimCity",
+        "ColumnName": "Country",
+        "TypeName": "nvarchar",
+        "MaxLength": 160,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(80)",
+        "FK": false
+      }
+    ],
+    "DimDate": [
+      {
+        "TableName": "DimDate",
+        "ColumnName": "DateKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "FullDate",
+        "TypeName": "date",
+        "MaxLength": 3,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "date",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "Year",
+        "TypeName": "smallint",
+        "MaxLength": 2,
+        "Precision": 5,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "smallint",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "MonthNumber",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "YearMonth",
+        "TypeName": "char",
+        "MaxLength": 7,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "char(7)",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "DayOfWeek",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "DayName",
+        "TypeName": "nvarchar",
+        "MaxLength": 30,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(15)",
+        "FK": false
+      },
+      {
+        "TableName": "DimDate",
+        "ColumnName": "IsWeekend",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      }
+    ],
+    "DimMatchStatus": [
+      {
+        "TableName": "DimMatchStatus",
+        "ColumnName": "MatchStatusKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimMatchStatus",
+        "ColumnName": "StatusName",
+        "TypeName": "nvarchar",
+        "MaxLength": 24,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(12)",
+        "FK": false
+      }
+    ],
+    "DimPaymentMethod": [
+      {
+        "TableName": "DimPaymentMethod",
+        "ColumnName": "PaymentMethodKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimPaymentMethod",
+        "ColumnName": "PaymentMethodID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimPaymentMethod",
+        "ColumnName": "MethodName",
+        "TypeName": "nvarchar",
+        "MaxLength": 80,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(40)",
+        "FK": false
+      },
+      {
+        "TableName": "DimPaymentMethod",
+        "ColumnName": "Category",
+        "TypeName": "nvarchar",
+        "MaxLength": 40,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(20)",
+        "FK": false
+      }
+    ],
+    "DimPlan": [
+      {
+        "TableName": "DimPlan",
+        "ColumnName": "PlanKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimPlan",
+        "ColumnName": "PlanID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimPlan",
+        "ColumnName": "PlanName",
+        "TypeName": "nvarchar",
+        "MaxLength": 80,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(40)",
+        "FK": false
+      },
+      {
+        "TableName": "DimPlan",
+        "ColumnName": "MonthlyPrice",
+        "TypeName": "decimal",
+        "MaxLength": 5,
+        "Precision": 9,
+        "Scale": 2,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "decimal(9,2)",
+        "FK": false
+      },
+      {
+        "TableName": "DimPlan",
+        "ColumnName": "Currency",
+        "TypeName": "char",
+        "MaxLength": 3,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "char(3)",
+        "FK": false
+      }
+    ],
+    "DimSwipeType": [
+      {
+        "TableName": "DimSwipeType",
+        "ColumnName": "SwipeTypeKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimSwipeType",
+        "ColumnName": "SwipeType",
+        "TypeName": "nvarchar",
+        "MaxLength": 20,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(10)",
+        "FK": false
+      },
+      {
+        "TableName": "DimSwipeType",
+        "ColumnName": "IsPositive",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      }
+    ],
+    "DimTime": [
+      {
+        "TableName": "DimTime",
+        "ColumnName": "TimeKey",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "tinyint",
+        "FK": false
+      },
+      {
+        "TableName": "DimTime",
+        "ColumnName": "HourLabel",
+        "TypeName": "char",
+        "MaxLength": 5,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "char(5)",
+        "FK": false
+      },
+      {
+        "TableName": "DimTime",
+        "ColumnName": "PartOfDay",
+        "TypeName": "nvarchar",
+        "MaxLength": 30,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(15)",
+        "FK": false
+      }
+    ],
+    "DimUser": [
+      {
+        "TableName": "DimUser",
+        "ColumnName": "UserKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "UserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "DisplayName",
+        "TypeName": "nvarchar",
+        "MaxLength": 120,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(60)",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "Gender",
+        "TypeName": "nvarchar",
+        "MaxLength": 40,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(20)",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "BirthDate",
+        "TypeName": "date",
+        "MaxLength": 3,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "date",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "RegisteredAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "DimUser",
+        "ColumnName": "IsVerified",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      }
+    ],
+    "EtlLog": [
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "LoadID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "StartedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "FinishedAt",
+        "TypeName": "datetime2",
+        "MaxLength": 6,
+        "Precision": 19,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "datetime2",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "Status",
+        "TypeName": "nvarchar",
+        "MaxLength": 24,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(12)",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "SwipesRows",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "MatchesRows",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "PaymentsRows",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "EtlLog",
+        "ColumnName": "ErrorMessage",
+        "TypeName": "nvarchar",
+        "MaxLength": 4000,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "nvarchar(2000)",
+        "FK": false
+      }
+    ],
+    "FactMatches": [
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "MatchKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "DateKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "TimeKey",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": true
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "UserKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "OtherUserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "CityKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "MatchStatusKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "MatchCount",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "MessageCount",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "HasConversation",
+        "TypeName": "bit",
+        "MaxLength": 1,
+        "Precision": 1,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "bit",
+        "FK": false
+      },
+      {
+        "TableName": "FactMatches",
+        "ColumnName": "MinutesToFirstMessage",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": true,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      }
+    ],
+    "FactPayments": [
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "PaymentKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "DateKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "TimeKey",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "UserKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "CityKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "PlanKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "PaymentMethodKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "PaymentStatus",
+        "TypeName": "nvarchar",
+        "MaxLength": 20,
+        "Precision": 0,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "nvarchar(10)",
+        "FK": false
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "Amount",
+        "TypeName": "decimal",
+        "MaxLength": 5,
+        "Precision": 9,
+        "Scale": 2,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "decimal(9,2)",
+        "FK": false
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "NetRevenue",
+        "TypeName": "decimal",
+        "MaxLength": 5,
+        "Precision": 9,
+        "Scale": 2,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "decimal(9,2)",
+        "FK": false
+      },
+      {
+        "TableName": "FactPayments",
+        "ColumnName": "PaymentCount",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      }
+    ],
+    "FactSwipes": [
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "SwipeKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 1,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "DateKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "TimeKey",
+        "TypeName": "tinyint",
+        "MaxLength": 1,
+        "Precision": 3,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "tinyint",
+        "FK": true
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "UserKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "TargetUserID",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "CityKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "SwipeTypeKey",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": true
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "SwipeCount",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      },
+      {
+        "TableName": "FactSwipes",
+        "ColumnName": "PositiveSwipeCount",
+        "TypeName": "int",
+        "MaxLength": 4,
+        "Precision": 10,
+        "Scale": 0,
+        "Nullable": false,
+        "PK": 0,
+        "SQLType": "int",
+        "FK": false
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "Child": "Users",
+      "ChildColumn": "CityID",
+      "Parent": "Cities",
+      "ParentColumn": "CityID"
+    },
+    {
+      "Child": "Swipes",
+      "ChildColumn": "CityID",
+      "Parent": "Cities",
+      "ParentColumn": "CityID"
+    },
+    {
+      "Child": "Matches",
+      "ChildColumn": "CityID",
+      "Parent": "Cities",
+      "ParentColumn": "CityID"
+    },
+    {
+      "Child": "Payments",
+      "ChildColumn": "CityID",
+      "Parent": "Cities",
+      "ParentColumn": "CityID"
+    },
+    {
+      "Child": "Photos",
+      "ChildColumn": "UserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "UserInterests",
+      "ChildColumn": "UserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Swipes",
+      "ChildColumn": "ActorUserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Swipes",
+      "ChildColumn": "TargetUserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Matches",
+      "ChildColumn": "UserLowID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Matches",
+      "ChildColumn": "UserHighID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Messages",
+      "ChildColumn": "SenderUserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "Subscriptions",
+      "ChildColumn": "UserID",
+      "Parent": "Users",
+      "ParentColumn": "UserID"
+    },
+    {
+      "Child": "UserInterests",
+      "ChildColumn": "InterestID",
+      "Parent": "Interests",
+      "ParentColumn": "InterestID"
+    },
+    {
+      "Child": "Messages",
+      "ChildColumn": "MatchID",
+      "Parent": "Matches",
+      "ParentColumn": "MatchID"
+    },
+    {
+      "Child": "MatchStatusLog",
+      "ChildColumn": "MatchID",
+      "Parent": "Matches",
+      "ParentColumn": "MatchID"
+    },
+    {
+      "Child": "Subscriptions",
+      "ChildColumn": "PlanID",
+      "Parent": "Plans",
+      "ParentColumn": "PlanID"
+    },
+    {
+      "Child": "Payments",
+      "ChildColumn": "SubscriptionID",
+      "Parent": "Subscriptions",
+      "ParentColumn": "SubscriptionID"
+    },
+    {
+      "Child": "Payments",
+      "ChildColumn": "PaymentMethodID",
+      "Parent": "PaymentMethods",
+      "ParentColumn": "PaymentMethodID"
+    }
+  ],
+  "warehouseRelationships": [
+    {
+      "Child": "FactSwipes",
+      "ChildColumn": "DateKey",
+      "Parent": "DimDate",
+      "ParentColumn": "DateKey"
+    },
+    {
+      "Child": "FactMatches",
+      "ChildColumn": "DateKey",
+      "Parent": "DimDate",
+      "ParentColumn": "DateKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "DateKey",
+      "Parent": "DimDate",
+      "ParentColumn": "DateKey"
+    },
+    {
+      "Child": "FactSwipes",
+      "ChildColumn": "TimeKey",
+      "Parent": "DimTime",
+      "ParentColumn": "TimeKey"
+    },
+    {
+      "Child": "FactMatches",
+      "ChildColumn": "TimeKey",
+      "Parent": "DimTime",
+      "ParentColumn": "TimeKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "TimeKey",
+      "Parent": "DimTime",
+      "ParentColumn": "TimeKey"
+    },
+    {
+      "Child": "FactSwipes",
+      "ChildColumn": "UserKey",
+      "Parent": "DimUser",
+      "ParentColumn": "UserKey"
+    },
+    {
+      "Child": "FactMatches",
+      "ChildColumn": "UserKey",
+      "Parent": "DimUser",
+      "ParentColumn": "UserKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "UserKey",
+      "Parent": "DimUser",
+      "ParentColumn": "UserKey"
+    },
+    {
+      "Child": "FactSwipes",
+      "ChildColumn": "CityKey",
+      "Parent": "DimCity",
+      "ParentColumn": "CityKey"
+    },
+    {
+      "Child": "FactMatches",
+      "ChildColumn": "CityKey",
+      "Parent": "DimCity",
+      "ParentColumn": "CityKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "CityKey",
+      "Parent": "DimCity",
+      "ParentColumn": "CityKey"
+    },
+    {
+      "Child": "FactSwipes",
+      "ChildColumn": "SwipeTypeKey",
+      "Parent": "DimSwipeType",
+      "ParentColumn": "SwipeTypeKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "PlanKey",
+      "Parent": "DimPlan",
+      "ParentColumn": "PlanKey"
+    },
+    {
+      "Child": "FactPayments",
+      "ChildColumn": "PaymentMethodKey",
+      "Parent": "DimPaymentMethod",
+      "ParentColumn": "PaymentMethodKey"
+    },
+    {
+      "Child": "FactMatches",
+      "ChildColumn": "MatchStatusKey",
+      "Parent": "DimMatchStatus",
+      "ParentColumn": "MatchStatusKey"
+    }
+  ]
+}

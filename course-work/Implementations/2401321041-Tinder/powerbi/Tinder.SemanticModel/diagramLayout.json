@@ -1,0 +1,154 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 686.962061293549,
+            "y": 251.70853958848875
+          },
+          "nodeIndex": "DimCity",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 930.101147447698,
+            "y": 544.37001535613126
+          },
+          "nodeIndex": "DimDate",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 406.84622337201529
+          },
+          "nodeIndex": "DimMatchStatus",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1508.7372991696081,
+            "y": 312.98243572055071
+          },
+          "nodeIndex": "DimPaymentMethod",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1508.6649055083478,
+            "y": -46.938002870566834
+          },
+          "nodeIndex": "DimPlan",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 705.86023505986145,
+            "y": 871.99632674364022
+          },
+          "nodeIndex": "DimSwipeType",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1221.9359570176223,
+            "y": -19.175710447972051
+          },
+          "nodeIndex": "DimTime",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 933.23600335807453,
+            "y": -50
+          },
+          "nodeIndex": "DimUser",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 338.119152621706,
+            "y": 125.47691064511991
+          },
+          "nodeIndex": "FactMatches",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1219.9530001769524,
+            "y": 220.04114472722893
+          },
+          "nodeIndex": "FactPayments",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 448.1208321756838,
+            "y": 482.77345078294206
+          },
+          "nodeIndex": "FactSwipes",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Всички таблици",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Всички таблици",
+  "defaultDiagram": "Всички таблици"
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "engagement02",
+  "position": {
+    "x": 20,
+    "y": 140,
+    "z": 2,
+    "width": 610,
+    "height": 290,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimTime"
+                    }
+                  },
+                  "Property": "HourLabel"
+                }
+              },
+              "queryRef": "DimTime.HourLabel",
+              "nativeQueryRef": "HourLabel",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactSwipes"
+                    }
+                  },
+                  "Property": "Total Swipes"
+                }
+              },
+              "queryRef": "FactSwipes.Total Swipes",
+              "nativeQueryRef": "Total Swipes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Swipes by hour (UTC)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
